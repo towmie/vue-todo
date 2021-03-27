@@ -51,7 +51,8 @@ export default {
                 },
                 {
                   toDoId: 3,
-                  toDo: "3d todo 2st list",
+                  toDo:
+                    "3d todo 2st list3d todo 2st list3d todo 2st list3d todo 2st list3d todo 2st list",
                   completed: false,
                 },
               ],
@@ -113,4 +114,17 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  // $primary-light-blue: #e4e7fc;
+  font-family: "Roboto", sans-serif;
+
+  background-color: rgb(236, 234, 255);
+  color: rgb(80, 80, 80);
+}
+</style>
