@@ -7,6 +7,7 @@
       :key="item.toDoId"
       :todo="item.toDo"
       :comleted="item.completed"
+      :id="item.toDoId"
     />
   </base-list-card>
 </template>

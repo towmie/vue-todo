@@ -1,7 +1,7 @@
 <template>
-  <form @submit.prevent="setTask">
+  <form @submit.prevent="setTask" class="form">
     <input type="text" v-model="task" placeholder="Your Task" />
-    <button type="submit">Sub</button>
+    <button type="submit"></button>
   </form>
 </template>
 
@@ -22,7 +22,6 @@ export default {
 
 <style scoped>
 input {
-  /* min-width: 270px; */
   font-family: inherit;
   font-size: 18px;
   outline: none;
@@ -39,5 +38,20 @@ input {
   border-radius: 1rem;
   box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6,
     4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
+}
+
+button {
+  position: relative;
+  top: 13px;
+  border: none;
+  margin-left: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-image: url(./../../assets/icons/check-green.svg);
+  background-size: 1.3rem 1.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 6px 4px 10px 0px #d1d9e6, 3px 3px 3px 0px rgb(246, 246, 252) inset;
 }
 </style>
