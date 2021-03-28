@@ -15,6 +15,7 @@ export default {
   methods: {
     setTask() {
       this.$emit("addTodo", this.task);
+      this.task = "";
     },
   },
 };
@@ -43,8 +44,9 @@ input {
 button {
   position: relative;
   top: 13px;
+  right: 10px;
   border: none;
-  margin-left: 1rem;
+  margin-left: 1.3rem;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;

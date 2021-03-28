@@ -3,9 +3,9 @@
     <div>{{ listName }}</div>
     <ToDoInput @addTodo="addToDo" />
     <ToDoItem
-      v-for="item in listTodos"
-      :key="item.toDoId"
-      :todo="item.toDo"
+      v-for="item in todoList"
+      :key="item.id"
+      :todo="item.todo"
       :comleted="item.completed"
       :id="item.toDoId"
     />
@@ -20,15 +20,20 @@ import BaseListCard from "../base/BaseListCard";
 export default {
   components: { ToDoItem, ToDoInput, BaseListCard },
 
-  props: ["listName", "listTodos"],
+  props: ["listName"],
   methods: {
     addToDo(todo) {
-      //   this.listTodos.push({
-      //     toDoId: Math.random(),
-      //     toDo: todo,
-      //     completed: false,
-      //   });
-      console.log(todo);
+      const toDoObj = {
+        id: Math.random(),
+        todo: todo,
+        completed: false,
+      };
+      this.$store.dispatch("todos/addTodo", toDoObj);
+    },
+  },
+  computed: {
+    todoList() {
+      return this.$store.getters["todos/todoList"];
     },
   },
 };

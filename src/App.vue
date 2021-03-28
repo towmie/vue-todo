@@ -35,28 +35,28 @@ export default {
                 },
               ],
             },
-            {
-              listId: 2,
-              listName: "Second List",
-              toDos: [
-                {
-                  toDoId: 1,
-                  toDo: "Wasssssuup 2",
-                  completed: false,
-                },
-                {
-                  toDoId: 2,
-                  toDo: "2d todo 2st list",
-                  completed: false,
-                },
-                {
-                  toDoId: 3,
-                  toDo:
-                    "3d todo 2st list3d todo 2st list3d todo 2st list3d todo 2st list3d todo 2st list",
-                  completed: false,
-                },
-              ],
-            },
+            // {
+            //   listId: 2,
+            //   listName: "Second List",
+            //   toDos: [
+            //     {
+            //       toDoId: 1,
+            //       toDo: "Wasssssuup 2",
+            //       completed: false,
+            //     },
+            //     {
+            //       toDoId: 2,
+            //       toDo: "2d todo 2st list",
+            //       completed: false,
+            //     },
+            //     {
+            //       toDoId: 3,
+            //       toDo:
+            //         "3d todo 2st list3d todo 2st list3d todo 2st list3d todo 2st list3d todo 2st list",
+            //       completed: false,
+            //     },
+            // ],
+            // },
           ],
         },
         // {
