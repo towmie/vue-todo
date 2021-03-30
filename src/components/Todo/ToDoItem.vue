@@ -9,7 +9,7 @@
       <p class="todo">{{ todo }}</p>
       <button class="edit">&nbsp;</button>
     </base-item>
-    <button class="delete">&nbsp;</button>
+    <button class="delete" @click="deleteTask">&nbsp;</button>
   </div>
 </template>
 
@@ -24,6 +24,9 @@ export default {
         completed: this.completed,
         itemId: this.itemId,
       });
+    },
+    deleteTask() {
+      this.$store.dispatch("todos/deleteTask", this.itemId);
     },
   },
 };
