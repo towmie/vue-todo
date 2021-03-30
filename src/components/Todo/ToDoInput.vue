@@ -48,6 +48,7 @@ input {
 
 button {
   position: relative;
+  outline: none;
   top: 13px;
   right: 10px;
   border: none;

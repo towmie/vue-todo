@@ -27,6 +27,15 @@ const TodoLists = {
     deleteTask(state, payload) {
       state.todoList = state.todoList.filter((el) => el.id !== payload);
     },
+
+    updateTask(state, payload) {
+      console.log(payload);
+      const updatedItem = state.todoList.filter(
+        (el) => el.id === payload.itemId
+      );
+      updatedItem[0].todo = payload.todo;
+      console.log(state.todoList);
+    },
   },
 
   actions: {
@@ -40,6 +49,9 @@ const TodoLists = {
 
     toggleCompleted(context, payload) {
       context.commit("toggleCompleted", payload);
+    },
+    updateTask(context, payload) {
+      context.commit("updateTask", payload);
     },
   },
 };
