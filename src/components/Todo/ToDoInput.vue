@@ -14,7 +14,12 @@ export default {
   },
   methods: {
     setTask() {
-      this.$emit("addTodo", this.task);
+      const toDoObj = {
+        id: Math.random(),
+        todo: this.task,
+        completed: false,
+      };
+      this.$emit("addTodo", toDoObj);
       this.task = "";
     },
   },

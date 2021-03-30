@@ -1,6 +1,6 @@
 <template>
   <div class="item">
-    <base-item :class="{ 'item-active': checked }">
+    <base-item :class="{ 'item-active': completed }">
       <div class="check">
         <label class="check__box">
           <input class="check__input" type="checkbox" @click="checkedItem" />
@@ -16,17 +16,14 @@
 <script>
 import BaseItem from "../base/BaseItem";
 export default {
+  props: ["todo", "completed", "itemId"],
   components: { BaseItem },
-  props: ["todo", "comleted", "id"],
-  data() {
-    return {
-      checked: false,
-    };
-  },
   methods: {
     checkedItem() {
-      this.checked = !this.checked;
-      console.log(this.checked);
+      this.$store.dispatch("todos/toggleCompleted", {
+        completed: this.completed,
+        itemId: this.itemId,
+      });
     },
   },
 };
