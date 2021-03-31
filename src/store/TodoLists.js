@@ -1,4 +1,5 @@
 "use strict";
+
 const TodoLists = {
   namespaced: true,
   state() {
@@ -29,17 +30,16 @@ const TodoLists = {
     },
 
     updateTask(state, payload) {
-      console.log(payload);
       const updatedItem = state.todoList.filter(
         (el) => el.id === payload.itemId
       );
       updatedItem[0].todo = payload.todo;
-      console.log(state.todoList);
     },
   },
 
   actions: {
     addTodo(context, payload) {
+      console.log(payload);
       context.commit("addTodo", payload);
     },
 

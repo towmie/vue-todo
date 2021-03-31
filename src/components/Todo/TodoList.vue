@@ -20,10 +20,11 @@ import BaseListCard from "../base/BaseListCard";
 export default {
   components: { ToDoItem, ToDoInput, BaseListCard },
 
-  props: ["listName"],
+  props: ["listName", "listTodos", "listId"],
   methods: {
     addTodo(todo) {
-      this.$store.dispatch("todos/addTodo", todo);
+      this.$emit("addTodo", { todo, listId: this.listId });
+      // this.$store.dispatch("todos/addTodo", todo);
     },
   },
   computed: {
